@@ -120,7 +120,8 @@
 				D1B8A626200E85390082415D /* LaunchScreen.storyboard */,
 				D1B8A629200E85390082415D /* Info.plist */,
 			);
-			path = QA;
+			name = QA;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		D1B8A62F200E8A710082415D /* Data */ = {
@@ -416,7 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57Y47U492U;
-				INFOPLIST_FILE = QA/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linkedin.QA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57Y47U492U;
-				INFOPLIST_FILE = QA/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linkedin.QA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
