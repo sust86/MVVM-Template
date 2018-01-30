@@ -18,7 +18,6 @@ class AnswerCell: ReusableCell {
         guard let answerCellViewData = viewData as? AnswerCellViewData else {
             return
         }
-        authorNameLabel?.text = answerCellViewData.authorName
         answerLabel?.text = answerCellViewData.answer
     }
 }

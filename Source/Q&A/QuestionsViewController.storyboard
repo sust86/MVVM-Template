@@ -22,10 +22,15 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="MAj-2a-5Fa">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MAj-2a-5Fa" firstAttribute="centerY" secondItem="z99-y1-M2R" secondAttribute="centerY" id="518-Mn-BS9"/>
                             <constraint firstItem="bbs-S4-VbM" firstAttribute="leading" secondItem="XPK-OT-eUQ" secondAttribute="leading" id="9At-Bg-tem"/>
+                            <constraint firstItem="MAj-2a-5Fa" firstAttribute="centerX" secondItem="z99-y1-M2R" secondAttribute="centerX" id="FvV-UY-PgG"/>
                             <constraint firstItem="XPK-OT-eUQ" firstAttribute="bottom" secondItem="bbs-S4-VbM" secondAttribute="bottom" id="IVy-7O-7ap"/>
                             <constraint firstItem="bbs-S4-VbM" firstAttribute="top" secondItem="XPK-OT-eUQ" secondAttribute="top" id="gY0-9p-wqI"/>
                             <constraint firstItem="XPK-OT-eUQ" firstAttribute="trailing" secondItem="bbs-S4-VbM" secondAttribute="trailing" id="maI-8w-hHD"/>
@@ -33,6 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="XPK-OT-eUQ"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="MAj-2a-5Fa" id="p0c-Wb-ke3"/>
                         <outlet property="tableView" destination="bbs-S4-VbM" id="uiO-MI-F6m"/>
                     </connections>
                 </viewController>

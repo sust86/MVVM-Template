@@ -23,7 +23,6 @@ extension Array where Element: Equatable {
     }
 
     func takeElements(_ elementCount: Int) -> Array {
-
         var numElements = elementCount
         if numElements > count {
             numElements = count

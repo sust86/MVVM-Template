@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D125115C201EB330000FD5AD /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D125115B201EB330000FD5AD /* ProfileView.xib */; };
+		D125115E201EB33F000FD5AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125115D201EB33F000FD5AD /* ProfileView.swift */; };
+		D1251160201EB34B000FD5AD /* ProfileViewDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125115F201EB34B000FD5AD /* ProfileViewDataTransformer.swift */; };
+		D1251162201EB35D000FD5AD /* ProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1251161201EB35D000FD5AD /* ProfileViewData.swift */; };
+		D1251166201EB370000FD5AD /* ProfileViewInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1251165201EB370000FD5AD /* ProfileViewInteractionHandler.swift */; };
+		D125116A2020F091000FD5AD /* TableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12511692020F091000FD5AD /* TableViewData.swift */; };
 		D17DB77B201930C700DE8524 /* ViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DB77A201930C700DE8524 /* ViewSpec.swift */; };
 		D17DB77D2019527D00DE8524 /* QuestionCellInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DB77C2019527D00DE8524 /* QuestionCellInteractionHandler.swift */; };
 		D17DB77F2019530100DE8524 /* InteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DB77E2019530100DE8524 /* InteractionHandler.swift */; };
@@ -26,20 +32,24 @@
 		D1B8A658200EE0FB0082415D /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8A653200EE0FB0082415D /* QuestionCell.xib */; };
 		D1B8A659200EE0FB0082415D /* QuestionCellDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A654200EE0FB0082415D /* QuestionCellDataTransformer.swift */; };
 		D1B8A65A200EE0FB0082415D /* QuestionCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A655200EE0FB0082415D /* QuestionCellViewData.swift */; };
-		D1B8A65B200EE0FB0082415D /* QuestionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A656200EE0FB0082415D /* QuestionCellViewModel.swift */; };
-		D1B8A65D200EE11C0082415D /* QuestionsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A65C200EE11C0082415D /* QuestionsTableViewAdapter.swift */; };
+		D1B8A65D200EE11C0082415D /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A65C200EE11C0082415D /* TableViewAdapter.swift */; };
 		D1B8A65F200EE1840082415D /* ViewDataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A65E200EE1840082415D /* ViewDataCollection.swift */; };
 		D1B8A663200EE2370082415D /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A662200EE2370082415D /* AnswerCell.swift */; };
 		D1B8A665200EE2560082415D /* AnswerCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A664200EE2560082415D /* AnswerCellViewData.swift */; };
 		D1B8A667200EE2650082415D /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A666200EE2650082415D /* ViewData.swift */; };
 		D1B8A669200EE32B0082415D /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8A668200EE32B0082415D /* AnswerCell.xib */; };
 		D1B8A66B200EE3C30082415D /* AnswerCellDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A66A200EE3C30082415D /* AnswerCellDataTransformer.swift */; };
-		D1B8A66D200EE3D20082415D /* AnswerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A66C200EE3D20082415D /* AnswerCellViewModel.swift */; };
 		D1B8A66F200EE3F90082415D /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A66E200EE3F90082415D /* ServerModel.swift */; };
-		D1B8A671200EE4140082415D /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8A670200EE4140082415D /* DataTransformer.swift */; };
+		D1D68A6F201A5DC5001F742A /* AnswerCellInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D68A6E201A5DC5001F742A /* AnswerCellInteractionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D125115B201EB330000FD5AD /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		D125115D201EB33F000FD5AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D125115F201EB34B000FD5AD /* ProfileViewDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewDataTransformer.swift; sourceTree = "<group>"; };
+		D1251161201EB35D000FD5AD /* ProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewData.swift; sourceTree = "<group>"; };
+		D1251165201EB370000FD5AD /* ProfileViewInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewInteractionHandler.swift; sourceTree = "<group>"; };
+		D12511692020F091000FD5AD /* TableViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewData.swift; sourceTree = "<group>"; };
 		D17DB77A201930C700DE8524 /* ViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSpec.swift; sourceTree = "<group>"; };
 		D17DB77C2019527D00DE8524 /* QuestionCellInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCellInteractionHandler.swift; sourceTree = "<group>"; };
 		D17DB77E2019530100DE8524 /* InteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionHandler.swift; sourceTree = "<group>"; };
@@ -61,17 +71,15 @@
 		D1B8A653200EE0FB0082415D /* QuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 		D1B8A654200EE0FB0082415D /* QuestionCellDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCellDataTransformer.swift; sourceTree = "<group>"; };
 		D1B8A655200EE0FB0082415D /* QuestionCellViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCellViewData.swift; sourceTree = "<group>"; };
-		D1B8A656200EE0FB0082415D /* QuestionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCellViewModel.swift; sourceTree = "<group>"; };
-		D1B8A65C200EE11C0082415D /* QuestionsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewAdapter.swift; sourceTree = "<group>"; };
+		D1B8A65C200EE11C0082415D /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		D1B8A65E200EE1840082415D /* ViewDataCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataCollection.swift; sourceTree = "<group>"; };
 		D1B8A662200EE2370082415D /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		D1B8A664200EE2560082415D /* AnswerCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCellViewData.swift; sourceTree = "<group>"; };
 		D1B8A666200EE2650082415D /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		D1B8A668200EE32B0082415D /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		D1B8A66A200EE3C30082415D /* AnswerCellDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCellDataTransformer.swift; sourceTree = "<group>"; };
-		D1B8A66C200EE3D20082415D /* AnswerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCellViewModel.swift; sourceTree = "<group>"; };
 		D1B8A66E200EE3F90082415D /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
-		D1B8A670200EE4140082415D /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
+		D1D68A6E201A5DC5001F742A /* AnswerCellInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCellInteractionHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D125115A201EAE81000FD5AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D125117320210BA0000FD5AD /* View */,
+				D125117220210B69000FD5AD /* TableView */,
+				D125117120210B1B000FD5AD /* UserProfileView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1251167201EC212000FD5AD /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				D125115F201EB34B000FD5AD /* ProfileViewDataTransformer.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		D125116D2021091A000FD5AD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D1B8A65E200EE1840082415D /* ViewDataCollection.swift */,
+				D125117020210958000FD5AD /* CollectionView */,
+				D125116E20210925000FD5AD /* TableView */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D125116E20210925000FD5AD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D1B8A65C200EE11C0082415D /* TableViewAdapter.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		D125117020210958000FD5AD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		D125117120210B1B000FD5AD /* UserProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				D125115B201EB330000FD5AD /* ProfileView.xib */,
+				D125115D201EB33F000FD5AD /* ProfileView.swift */,
+				D1251161201EB35D000FD5AD /* ProfileViewData.swift */,
+				D1251165201EB370000FD5AD /* ProfileViewInteractionHandler.swift */,
+			);
+			path = UserProfileView;
+			sourceTree = "<group>";
+		};
+		D125117220210B69000FD5AD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D12511692020F091000FD5AD /* TableViewData.swift */,
+				D1B8A645200EC4C90082415D /* ReusableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		D125117320210BA0000FD5AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D17DB77E2019530100DE8524 /* InteractionHandler.swift */,
+				D1B8A666200EE2650082415D /* ViewData.swift */,
+				D17DB77A201930C700DE8524 /* ViewSpec.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D125117420210C1F000FD5AD /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				D125117620210D36000FD5AD /* Extensions */,
+				D125116D2021091A000FD5AD /* Data */,
+				D125115A201EAE81000FD5AD /* Views */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		D125117620210D36000FD5AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1B8A643200EBE230082415D /* Array+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D1B8A611200E85390082415D = {
 			isa = PBXGroup;
 			children = (
@@ -105,16 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				D1B8A61D200E85390082415D /* AppDelegate.swift */,
-				D1B8A643200EBE230082415D /* Array+.swift */,
-				D1B8A645200EC4C90082415D /* ReusableCell.swift */,
-				D1B8A666200EE2650082415D /* ViewData.swift */,
-				D17DB77A201930C700DE8524 /* ViewSpec.swift */,
-				D1B8A66E200EE3F90082415D /* ServerModel.swift */,
-				D1B8A670200EE4140082415D /* DataTransformer.swift */,
-				D17DB77E2019530100DE8524 /* InteractionHandler.swift */,
-				D1B8A65E200EE1840082415D /* ViewDataCollection.swift */,
-				D1B8A632200E8CDC0082415D /* Questions */,
-				D1B8A62F200E8A710082415D /* Data */,
+				D125117420210C1F000FD5AD /* Infra */,
+				D1B8A632200E8CDC0082415D /* Q&A */,
+				D1B8A62F200E8A710082415D /* API */,
 				D1B8A621200E85390082415D /* Main.storyboard */,
 				D1B8A624200E85390082415D /* Assets.xcassets */,
 				D1B8A626200E85390082415D /* LaunchScreen.storyboard */,
@@ -124,31 +216,32 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		D1B8A62F200E8A710082415D /* Data */ = {
+		D1B8A62F200E8A710082415D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D1B8A66E200EE3F90082415D /* ServerModel.swift */,
 				D1B8A630200E8A9F0082415D /* QuestionsAnswerCard.swift */,
 				D1B8A63A200EA2AA0082415D /* QuestionsDataProvider.swift */,
 			);
-			path = Data;
+			path = API;
 			sourceTree = "<group>";
 		};
-		D1B8A632200E8CDC0082415D /* Questions */ = {
+		D1B8A632200E8CDC0082415D /* Q&A */ = {
 			isa = PBXGroup;
 			children = (
 				D1B8A651200EE0FB0082415D /* Cells */,
-				D1B8A65C200EE11C0082415D /* QuestionsTableViewAdapter.swift */,
-				D1B8A633200E8D440082415D /* QuestionsViewController.swift */,
 				D1B8A638200E8DFA0082415D /* QuestionsViewModel.swift */,
 				D17DB780201957F200DE8524 /* QuestionsViewData.swift */,
+				D1B8A633200E8D440082415D /* QuestionsViewController.swift */,
 				D1B8A635200E8D760082415D /* QuestionsViewController.storyboard */,
 			);
-			path = Questions;
+			path = "Q&A";
 			sourceTree = "<group>";
 		};
 		D1B8A651200EE0FB0082415D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D1251167201EC212000FD5AD /* ProfileView */,
 				D1B8A660200EE2150082415D /* AnswerCell */,
 				D1B8A661200EE21F0082415D /* QuestionCell */,
 			);
@@ -160,9 +253,9 @@
 			children = (
 				D1B8A662200EE2370082415D /* AnswerCell.swift */,
 				D1B8A668200EE32B0082415D /* AnswerCell.xib */,
-				D1B8A664200EE2560082415D /* AnswerCellViewData.swift */,
 				D1B8A66A200EE3C30082415D /* AnswerCellDataTransformer.swift */,
-				D1B8A66C200EE3D20082415D /* AnswerCellViewModel.swift */,
+				D1B8A664200EE2560082415D /* AnswerCellViewData.swift */,
+				D1D68A6E201A5DC5001F742A /* AnswerCellInteractionHandler.swift */,
 			);
 			path = AnswerCell;
 			sourceTree = "<group>";
@@ -174,7 +267,6 @@
 				D1B8A653200EE0FB0082415D /* QuestionCell.xib */,
 				D1B8A654200EE0FB0082415D /* QuestionCellDataTransformer.swift */,
 				D1B8A655200EE0FB0082415D /* QuestionCellViewData.swift */,
-				D1B8A656200EE0FB0082415D /* QuestionCellViewModel.swift */,
 				D17DB77C2019527D00DE8524 /* QuestionCellInteractionHandler.swift */,
 			);
 			path = QuestionCell;
@@ -241,6 +333,7 @@
 			files = (
 				D1B8A628200E85390082415D /* LaunchScreen.storyboard in Resources */,
 				D1B8A669200EE32B0082415D /* AnswerCell.xib in Resources */,
+				D125115C201EB330000FD5AD /* ProfileView.xib in Resources */,
 				D1B8A625200E85390082415D /* Assets.xcassets in Resources */,
 				D1B8A658200EE0FB0082415D /* QuestionCell.xib in Resources */,
 				D1B8A623200E85390082415D /* Main.storyboard in Resources */,
@@ -257,27 +350,30 @@
 			files = (
 				D17DB77B201930C700DE8524 /* ViewSpec.swift in Sources */,
 				D1B8A646200EC4C90082415D /* ReusableCell.swift in Sources */,
-				D1B8A65D200EE11C0082415D /* QuestionsTableViewAdapter.swift in Sources */,
-				D1B8A66D200EE3D20082415D /* AnswerCellViewModel.swift in Sources */,
+				D1B8A65D200EE11C0082415D /* TableViewAdapter.swift in Sources */,
+				D125116A2020F091000FD5AD /* TableViewData.swift in Sources */,
 				D1B8A659200EE0FB0082415D /* QuestionCellDataTransformer.swift in Sources */,
+				D1251166201EB370000FD5AD /* ProfileViewInteractionHandler.swift in Sources */,
 				D17DB77D2019527D00DE8524 /* QuestionCellInteractionHandler.swift in Sources */,
 				D1B8A61E200E85390082415D /* AppDelegate.swift in Sources */,
-				D1B8A65B200EE0FB0082415D /* QuestionCellViewModel.swift in Sources */,
 				D1B8A634200E8D440082415D /* QuestionsViewController.swift in Sources */,
 				D1B8A644200EBE230082415D /* Array+.swift in Sources */,
 				D17DB781201957F200DE8524 /* QuestionsViewData.swift in Sources */,
 				D1B8A63B200EA2AA0082415D /* QuestionsDataProvider.swift in Sources */,
 				D1B8A657200EE0FB0082415D /* QuestionCell.swift in Sources */,
 				D1B8A639200E8DFA0082415D /* QuestionsViewModel.swift in Sources */,
+				D1251162201EB35D000FD5AD /* ProfileViewData.swift in Sources */,
+				D125115E201EB33F000FD5AD /* ProfileView.swift in Sources */,
 				D1B8A65A200EE0FB0082415D /* QuestionCellViewData.swift in Sources */,
 				D1B8A665200EE2560082415D /* AnswerCellViewData.swift in Sources */,
-				D1B8A671200EE4140082415D /* DataTransformer.swift in Sources */,
 				D1B8A663200EE2370082415D /* AnswerCell.swift in Sources */,
+				D1251160201EB34B000FD5AD /* ProfileViewDataTransformer.swift in Sources */,
 				D1B8A66B200EE3C30082415D /* AnswerCellDataTransformer.swift in Sources */,
 				D1B8A66F200EE3F90082415D /* ServerModel.swift in Sources */,
 				D17DB77F2019530100DE8524 /* InteractionHandler.swift in Sources */,
 				D1B8A631200E8A9F0082415D /* QuestionsAnswerCard.swift in Sources */,
 				D1B8A667200EE2650082415D /* ViewData.swift in Sources */,
+				D1D68A6F201A5DC5001F742A /* AnswerCellInteractionHandler.swift in Sources */,
 				D1B8A65F200EE1840082415D /* ViewDataCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

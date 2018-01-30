@@ -11,8 +11,6 @@ import UIKit
 
 class QuestionCellInteractionHandler: InteractionHandler {
 
-    // What do we need here. ViewData, ViewModel?
-
     func didTapLikeButton(sender: UIButton) {
         print("You liked a question!")
     }

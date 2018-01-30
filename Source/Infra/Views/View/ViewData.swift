@@ -8,4 +8,5 @@
 
 import Foundation
 
+// TODO: What is this good for? We can use just `Any`
 protocol ViewData {}

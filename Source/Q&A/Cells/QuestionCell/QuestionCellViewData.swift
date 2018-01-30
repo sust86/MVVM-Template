@@ -9,8 +9,8 @@
 import Foundation
 
 struct QuestionCellViewData: ViewData {
-    var authorName: String
     var question: String
     var likes: String
     var answers: String
+    var authorViewData: ProfileViewData
 }

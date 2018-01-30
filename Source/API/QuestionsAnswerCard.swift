@@ -20,6 +20,8 @@ class QuestionAnswerCard: ServerModel {
     let numberOfLikes: Double // Consistency support?
     let numberOfComments: Double // Consistency support?
 
+    let createdAt: Double // Milliseconds
+
     /*
     let isFromInstructor: Bool
     let isFromYourCompany: Bool
@@ -35,7 +37,8 @@ class QuestionAnswerCard: ServerModel {
         childContent: [QuestionAnswerCard],
         videoOffsetInSeconds: Double,
         numberOfLikes: Double,
-        numberOfComments: Double) {
+        numberOfComments: Double,
+        createdAt: Double = 1517192691836) {
 
         self.questionURN = questionURN
         self.questionTitle = questionTitle
@@ -44,16 +47,23 @@ class QuestionAnswerCard: ServerModel {
         self.childContent = childContent
         self.videoOffsetInSeconds = videoOffsetInSeconds
         self.numberOfLikes = numberOfLikes
-        self.numberOfComments = numberOfComments        
+        self.numberOfComments = numberOfComments
+        self.createdAt = createdAt
     }
+
+
 }
 
 extension QuestionAnswerCard {
 
+    // duplicate!
     var authorName: String {
-        let firstName = authors.first?.firstName ?? ""
-        let lastName = authors.first?.lastName ?? ""
-        return "\(firstName)" + " \(lastName)"
+        return authors.first?.fullName ?? ""
+    }
+
+    var createdDate: Date {
+        let timeIntervalInSeconds = createdAt * 1000
+        return Date(timeIntervalSince1970: timeIntervalInSeconds)
     }
 }
 
@@ -63,4 +73,8 @@ struct LILAuthorCard: ServerModel {
     let lastName: String
     let headline: String
     let thumbnails: [String]?
+
+    var fullName: String {
+        return "\(firstName)" + " \(lastName)"
+    }
 }

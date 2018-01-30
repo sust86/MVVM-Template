@@ -9,6 +9,6 @@
 import Foundation
 
 struct AnswerCellViewData: ViewData {
-    var authorName: String
     var answer: String
+    var authorViewData: ProfileViewData
 }
