@@ -13,6 +13,9 @@
 		D1251162201EB35D000FD5AD /* ProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1251161201EB35D000FD5AD /* ProfileViewData.swift */; };
 		D1251166201EB370000FD5AD /* ProfileViewInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1251165201EB370000FD5AD /* ProfileViewInteractionHandler.swift */; };
 		D125116A2020F091000FD5AD /* TableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12511692020F091000FD5AD /* TableViewData.swift */; };
+		D125117F20227EAB000FD5AD /* ViewBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125117E20227EAB000FD5AD /* ViewBinder.swift */; };
+		D125118120227F20000FD5AD /* QuestionCellViewBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125118020227F20000FD5AD /* QuestionCellViewBinder.swift */; };
+		D12511832022846E000FD5AD /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12511822022846E000FD5AD /* UIView+.swift */; };
 		D17DB77B201930C700DE8524 /* ViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DB77A201930C700DE8524 /* ViewSpec.swift */; };
 		D17DB77D2019527D00DE8524 /* QuestionCellInteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DB77C2019527D00DE8524 /* QuestionCellInteractionHandler.swift */; };
 		D17DB77F2019530100DE8524 /* InteractionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DB77E2019530100DE8524 /* InteractionHandler.swift */; };
@@ -50,6 +53,9 @@
 		D1251161201EB35D000FD5AD /* ProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewData.swift; sourceTree = "<group>"; };
 		D1251165201EB370000FD5AD /* ProfileViewInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewInteractionHandler.swift; sourceTree = "<group>"; };
 		D12511692020F091000FD5AD /* TableViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewData.swift; sourceTree = "<group>"; };
+		D125117E20227EAB000FD5AD /* ViewBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBinder.swift; sourceTree = "<group>"; };
+		D125118020227F20000FD5AD /* QuestionCellViewBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCellViewBinder.swift; sourceTree = "<group>"; };
+		D12511822022846E000FD5AD /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		D17DB77A201930C700DE8524 /* ViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSpec.swift; sourceTree = "<group>"; };
 		D17DB77C2019527D00DE8524 /* QuestionCellInteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCellInteractionHandler.swift; sourceTree = "<group>"; };
 		D17DB77E2019530100DE8524 /* InteractionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionHandler.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 				D17DB77E2019530100DE8524 /* InteractionHandler.swift */,
 				D1B8A666200EE2650082415D /* ViewData.swift */,
 				D17DB77A201930C700DE8524 /* ViewSpec.swift */,
+				D125117E20227EAB000FD5AD /* ViewBinder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 		D125117620210D36000FD5AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D12511822022846E000FD5AD /* UIView+.swift */,
 				D1B8A643200EBE230082415D /* Array+.swift */,
 			);
 			path = Extensions;
@@ -266,6 +274,7 @@
 				D1B8A652200EE0FB0082415D /* QuestionCell.swift */,
 				D1B8A653200EE0FB0082415D /* QuestionCell.xib */,
 				D1B8A654200EE0FB0082415D /* QuestionCellDataTransformer.swift */,
+				D125118020227F20000FD5AD /* QuestionCellViewBinder.swift */,
 				D1B8A655200EE0FB0082415D /* QuestionCellViewData.swift */,
 				D17DB77C2019527D00DE8524 /* QuestionCellInteractionHandler.swift */,
 			);
@@ -349,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17DB77B201930C700DE8524 /* ViewSpec.swift in Sources */,
+				D125118120227F20000FD5AD /* QuestionCellViewBinder.swift in Sources */,
 				D1B8A646200EC4C90082415D /* ReusableCell.swift in Sources */,
 				D1B8A65D200EE11C0082415D /* TableViewAdapter.swift in Sources */,
 				D125116A2020F091000FD5AD /* TableViewData.swift in Sources */,
@@ -362,6 +372,7 @@
 				D1B8A63B200EA2AA0082415D /* QuestionsDataProvider.swift in Sources */,
 				D1B8A657200EE0FB0082415D /* QuestionCell.swift in Sources */,
 				D1B8A639200E8DFA0082415D /* QuestionsViewModel.swift in Sources */,
+				D125117F20227EAB000FD5AD /* ViewBinder.swift in Sources */,
 				D1251162201EB35D000FD5AD /* ProfileViewData.swift in Sources */,
 				D125115E201EB33F000FD5AD /* ProfileView.swift in Sources */,
 				D1B8A65A200EE0FB0082415D /* QuestionCellViewData.swift in Sources */,
@@ -370,6 +381,7 @@
 				D1251160201EB34B000FD5AD /* ProfileViewDataTransformer.swift in Sources */,
 				D1B8A66B200EE3C30082415D /* AnswerCellDataTransformer.swift in Sources */,
 				D1B8A66F200EE3F90082415D /* ServerModel.swift in Sources */,
+				D12511832022846E000FD5AD /* UIView+.swift in Sources */,
 				D17DB77F2019530100DE8524 /* InteractionHandler.swift in Sources */,
 				D1B8A631200E8A9F0082415D /* QuestionsAnswerCard.swift in Sources */,
 				D1B8A667200EE2650082415D /* ViewData.swift in Sources */,

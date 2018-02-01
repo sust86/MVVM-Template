@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 // TODO:
-// Working CellBinder example
 // Working InteractionHandler example
 // View property binding
 
@@ -38,6 +37,7 @@ class QuestionViewController: UIViewController {
         setupTableView()
 
         loadData()
+
     }
 
     // MARK: - Setup
@@ -47,13 +47,16 @@ class QuestionViewController: UIViewController {
         let questionCellInteractionHandler = QuestionCellInteractionHandler()
         let profileViewInteractionHandler = ProfileViewInteractionHandler()
 
-        let questionCellViewSpec = ViewSpec(viewClass: QuestionCell.self, interactionHandler: questionCellInteractionHandler)
-        let answerCellViewSpec = ViewSpec(viewClass: AnswerCell.self, interactionHandler: nil)
-        let profileViewSpec = ViewSpec(viewClass: ProfileView.self, interactionHandler: profileViewInteractionHandler)
+        let questionCellViewBinder = QuestionCellViewBinder()
+
+        let questionCellViewSpec = ViewSpec(viewClass: QuestionCell.self, viewBinder: questionCellViewBinder, interactionHandler: questionCellInteractionHandler)
+        let answerCellViewSpec = ViewSpec(viewClass: AnswerCell.self, viewBinder: nil, interactionHandler: nil)
+        let profileViewSpec = ViewSpec(viewClass: ProfileView.self, viewBinder: nil, interactionHandler: profileViewInteractionHandler)
 
         viewSpecMap = ViewSpecMap(map: [String(describing: AnswerCellViewData.self): answerCellViewSpec,
                                  String(describing: QuestionCellViewData.self): questionCellViewSpec,
-                                 String(describing: ProfileView.self): profileViewSpec])
+                                 String(describing: ProfileViewData.self): profileViewSpec])
+        // TODO: Improve the key for this map. It's really annoying to use.
     }
 
     private func setupViewModel() {

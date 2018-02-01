@@ -27,11 +27,12 @@ class ViewSpec {
 
     var viewClass: UIView.Type
     var interactionHandler: InteractionHandler?
-    //    var binder: ViewBinderType
+    var viewBinder: ViewBinderProtocol?
     //    var style: ViewStyleType
 
-    init(viewClass: UIView.Type, interactionHandler: InteractionHandler?) {
+    init(viewClass: UIView.Type, viewBinder: ViewBinderProtocol?, interactionHandler: InteractionHandler?) {
         self.viewClass = viewClass
+        self.viewBinder = viewBinder
         self.interactionHandler = interactionHandler
     }
 }

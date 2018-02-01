@@ -11,6 +11,6 @@ import Foundation
 class ProfileViewInteractionHandler: InteractionHandler {
 
     func didTapView(sender: ProfileView) {
-        // TODO: 
+        print("Oh, someone tapped on the author's profile!")
     }
 }

@@ -36,41 +36,27 @@ extension TableViewAdapter: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Get ViewData
+        // Get view data
         guard let viewData = viewDataCollection.viewData(atIndexPath: indexPath) else {
             return UITableViewCell() // We should have an empty cell as a fallback in case anything goes wrong.
         }
-        // Get ViewSpec
+        // Get view spec
         guard let viewSpec = viewSpecMap.spec(for: String(describing: type(of: viewData))) else {
             return UITableViewCell()
         }
-        // Get reusable cell class
+        // Get cell class
         guard let reusableCellClass = viewSpec.viewClass as? ReusableCell.Type else {
             return UITableViewCell()
         }
         // Register cell
         registerCellIfNeeded(reusableCellClass, for: tableView)
 
-        // Get reusable cell
+        // Dequeue cell
         guard let reusableCell = tableView.dequeueReusableCell(withIdentifier: reusableCellClass.reuseIdentifier, for: indexPath) as? ReusableCell else {
             return UITableViewCell()
         }
-
-        // Configure reusable cell
-        reusableCell.configure(with: viewData, interactionHandler: viewSpec.interactionHandler)
-
-        // TODO: The viewData for questions and answers contains a nested viewData for the author.
-        // We'll introduce a QuestionViewBinder / AnswerViewBinder, which will have enough knowledge about QuestionCell / AnswerCell to populate its field,
-        // and populate the ProfileView within the QuestionCell/ AnswerCell
-        // We don't want to do any of this in here since this class represents a generic solution for table views.
-
-        // Note: The ViewBinder will use the ViewSpecMap to set the correct interaction handlers for views/ subviews.
-
-        // Snippet from voyager:
-//        [viewSpec.binder bindViewData:viewData
-//            toView:cell
-//            withInteractions:viewSpec.interactions
-//            style:viewSpec.style];`
+        // Configure cell
+        viewSpec.viewBinder?.bindView(reusableCell, to: viewData, using: viewSpecMap)
 
         return reusableCell
     }

@@ -14,5 +14,6 @@ class ReusableCell: UITableViewCell {
         return String(describing: self)
     }
 
+    // TODO: Should this be in here? Some views might use a binder and are not provindg this
     func configure(with viewData: ViewData, interactionHandler: InteractionHandler? = nil) {}
 }

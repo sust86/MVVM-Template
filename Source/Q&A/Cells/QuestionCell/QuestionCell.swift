@@ -11,26 +11,34 @@ import UIKit
 
 class QuestionCell: ReusableCell {
 
-    @IBOutlet weak var questionLabel: UILabel?
-    @IBOutlet weak var likeButton: UIButton?
-    @IBOutlet weak var commentButton: UIButton?
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var commentButton: UIButton!
 
-    private var interactionHandler: QuestionCellInteractionHandler?
+    @IBOutlet weak var profileViewContainer: UIView!
+    var authorView: ProfileView?
 
-    // MARK: - Public Interface
+    // TODO: Move to base class? (base view class?)
+    var interactionHandler: QuestionCellInteractionHandler?
 
-    override func configure(with viewData: ViewData, interactionHandler: InteractionHandler? = nil) {
-        // TODO: Should we pass in the correct type?
-        guard let viewData = viewData as? QuestionCellViewData else {
+    // MARK: - Lifecycle
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupProfileView()
+    }
+
+    // MARK: - Setup
+
+    private func setupProfileView() {
+        guard let profileView = UIView.loadFromNib(ProfileView.self) else {
             return
         }
-
-        questionLabel?.text = viewData.question
-        likeButton?.setTitle(viewData.likes, for: .normal)
-        commentButton?.setTitle(viewData.answers, for: .normal)
-
-        self.interactionHandler = interactionHandler as? QuestionCellInteractionHandler
+        profileView.addAsSubviewAndPinEdges(toContainer: profileViewContainer)
+        authorView = profileView
     }
+
+    // MARK: - IBActions
 
     @IBAction func likeButtonTapped(sender: UIButton) {
         interactionHandler?.didTapLikeButton(sender: sender)
