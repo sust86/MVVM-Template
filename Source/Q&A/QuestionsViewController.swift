@@ -67,8 +67,8 @@ class QuestionViewController: UIViewController {
         guard let viewData = questionsViewModel?.viewData else {
             return
         }
-        viewData.isLoading.bindAndFire { [unowned self] (isLoading) in
-            self.toggleLoadingIndicator(isVisible: isLoading)
+        viewData.isLoading.bindAndFire { [weak self] (isLoading) in
+            self?.toggleLoadingIndicator(isVisible: isLoading)
         }
     }
 
