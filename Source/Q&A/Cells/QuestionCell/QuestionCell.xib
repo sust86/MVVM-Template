@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="162" id="Nu2-eC-PHa" customClass="QuestionCell" customModule="QA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="163"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nu2-eC-PHa" id="mnE-vU-Dtz">
+                <rect key="frame" x="0.0" y="0.0" width="409" height="162.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{Text}}" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf4-oM-7rg">
+                        <rect key="frame" x="20" y="80.5" width="369" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeF-uO-GIq">
+                        <rect key="frame" x="20" y="117.5" width="78" height="30"/>
+                        <state key="normal" title="{{10 Likes}}"/>
+                        <connections>
+                            <action selector="likeButtonTappedWithSender:" destination="Nu2-eC-PHa" eventType="touchUpInside" id="1cp-ur-KE1"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-84-Kb8">
+                        <rect key="frame" x="118" y="118" width="98" height="30"/>
+                        <state key="normal" title="{{1 comment}}"/>
+                        <connections>
+                            <action selector="commentButtonTappedWithSender:" destination="Nu2-eC-PHa" eventType="touchUpInside" id="3Xb-zD-sXH"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-MJ-qya">
+                        <rect key="frame" x="0.0" y="0.0" width="409" height="73"/>
+                        <color key="backgroundColor" red="0.96621346470000002" green="0.84191884360000002" blue="0.60357511370000005" alpha="0.44547755280000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="73" id="Osm-iZ-hkM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Yf4-oM-7rg" secondAttribute="trailing" constant="20" id="5Vf-aj-ghP"/>
+                    <constraint firstItem="xeF-uO-GIq" firstAttribute="top" secondItem="Yf4-oM-7rg" secondAttribute="bottom" constant="16" id="Ce1-mg-RXs"/>
+                    <constraint firstAttribute="trailing" secondItem="ciC-MJ-qya" secondAttribute="trailing" id="FVy-vb-KLh"/>
+                    <constraint firstItem="Yf4-oM-7rg" firstAttribute="leading" secondItem="mnE-vU-Dtz" secondAttribute="leading" constant="20" id="ICu-tw-Lde"/>
+                    <constraint firstAttribute="bottom" secondItem="xeF-uO-GIq" secondAttribute="bottom" constant="15" id="IDg-SN-hON"/>
+                    <constraint firstItem="YlT-84-Kb8" firstAttribute="leading" secondItem="xeF-uO-GIq" secondAttribute="trailing" constant="20" id="OWl-J9-5VY"/>
+                    <constraint firstItem="YlT-84-Kb8" firstAttribute="centerY" secondItem="xeF-uO-GIq" secondAttribute="centerY" id="exe-Id-ule"/>
+                    <constraint firstItem="ciC-MJ-qya" firstAttribute="leading" secondItem="mnE-vU-Dtz" secondAttribute="leading" id="fqI-0p-DOV"/>
+                    <constraint firstItem="xeF-uO-GIq" firstAttribute="leading" secondItem="Yf4-oM-7rg" secondAttribute="leading" id="glK-2T-pw6"/>
+                    <constraint firstItem="Yf4-oM-7rg" firstAttribute="top" secondItem="ciC-MJ-qya" secondAttribute="bottom" constant="7.5" id="hty-jZ-W3q"/>
+                    <constraint firstItem="ciC-MJ-qya" firstAttribute="top" secondItem="mnE-vU-Dtz" secondAttribute="top" id="tf9-0N-oID"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentButton" destination="YlT-84-Kb8" id="StO-w0-i2K"/>
+                <outlet property="likeButton" destination="xeF-uO-GIq" id="nVO-us-pHG"/>
+                <outlet property="profileViewContainer" destination="ciC-MJ-qya" id="AGi-ip-M3W"/>
+                <outlet property="questionLabel" destination="Yf4-oM-7rg" id="I6Z-dV-zKd"/>
+            </connections>
+            <point key="canvasLocation" x="-93.5" y="17.5"/>
+        </tableViewCell>
+    </objects>
+</document>
