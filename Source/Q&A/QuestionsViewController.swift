@@ -67,7 +67,9 @@ class QuestionViewController: UIViewController {
         guard let viewData = questionsViewModel?.viewData else {
             return
         }
-        activityIndicatorView.isHidden = !viewData.isLoading
+        viewData.isLoading.bindAndFire { [unowned self] (isLoading) in
+            self.toggleLoadingIndicator(isVisible: isLoading)
+        }
     }
 
     // MARK: TableView
@@ -87,6 +89,7 @@ class QuestionViewController: UIViewController {
         tableView.estimatedRowHeight = tableViewData.estimatedRowHeight
         tableView.rowHeight = tableViewData.rowHeight
         tableView.allowsSelection = tableViewData.allowsSelection
+        tableView.separatorStyle = .none    // TODO: This should go to the view style
 
         tableView.dataSource = tableViewAdapter
         tableView.delegate = self
@@ -95,18 +98,24 @@ class QuestionViewController: UIViewController {
     // MARK: - Data Loading
 
     private func loadData() {
-        questionsViewModel?.loadData(completion: {
+        questionsViewModel?.loadData(completion: { [weak self] () in
             // QuestionViewModel manages our data layer. We just need to reload the table view once data loading is done :)
-            tableView.reloadData()
+            self?.tableView.reloadData()
         })
     }
 
     private func loadMoreData() {
-        questionsViewModel?.loadMoreData(completion: {
-            tableView.reloadData()
+        questionsViewModel?.loadMoreData(completion: { [weak self] () in
+            self?.tableView.reloadData()
         })
     }
 
+    // MARK: - Private Methods
+
+    private func toggleLoadingIndicator(isVisible: Bool) {
+        isVisible ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
+        activityIndicatorView.isHidden = !isVisible
+    }
 }
 
 /**

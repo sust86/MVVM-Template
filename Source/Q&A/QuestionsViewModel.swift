@@ -42,21 +42,21 @@ class QuestionsViewModel {
     /**
      Ask the view model to load its data.
      */
-    func loadData(completion: (() -> Void)) {
-        viewData?.isLoading = true // TODO: We need to figure out how we want to do binding / observing
+    func loadData(completion: (() -> Void)? = nil) {
+        viewData?.isLoading.value = true
         dataProvider?.getQuestions(completion: { [weak self] (questionCards: [QuestionAnswerCard]) in
             self?.buildViewDataCollection(for: questionCards)
-            self?.viewData?.isLoading = false
-            completion()
+            self?.viewData?.isLoading.value = false
+            completion?()
         })
     }
 
-    func loadMoreData(completion: (() -> Void)) {
-        viewData?.isLoading = true
+    func loadMoreData(completion: (() -> Void)? = nil) {
+        viewData?.isLoading.value = true
         dataProvider?.getQuestions(completion: { [weak self] (questionCards: [QuestionAnswerCard]) in
             self?.appendViewDataCollection(with: questionCards)
-            self?.viewData?.isLoading = false
-            completion()
+            self?.viewData?.isLoading.value = false
+            completion?()
         })
     }
 

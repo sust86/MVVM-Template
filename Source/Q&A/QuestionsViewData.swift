@@ -14,7 +14,7 @@ import UIKit
 // When we are loading more data, or modifying data in there, we don't want to recreate the whole struct and pass it to our TableViewAdapter again.
 
 class QuestionsViewData: ViewData {
-    var isLoading: Bool = false
+    var isLoading = Dynamic(false)
     var tableViewData: TableViewData
 
     // MARK: - Lifecycle

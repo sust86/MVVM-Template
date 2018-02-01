@@ -13,9 +13,12 @@ class QuestionDataProvider {
 
     // MARK: - Public Interface
 
-    func getQuestions(completion: ((_ data: [QuestionAnswerCard]) -> Void)) {
-        let data = fakeData()
-        completion(data)
+    func getQuestions(completion: @escaping ((_ data: [QuestionAnswerCard]) -> Void)) {
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let data = self.fakeData()
+            completion(data)
+        }
     }
 
     private func fakeData() -> [QuestionAnswerCard] {
